@@ -1,0 +1,609 @@
+/* ------------------- IMPORT FROM GOOGLE FONTS ------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ------------------- GENERAL SETTINGS ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  color: #333333;
+  line-height: 1.5;
+  font-size: clamp(1rem, 0.5vw, 2rem);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: 600;
+}
+
+/* ------------------- STYLE CONTAINER ------------------- */
+section {
+  min-height: 90vh;
+  padding: 5em;
+}
+
+
+/* ------------------- COLUMN RESPONSIVE CLASSES -------------------*/
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* ------------------- HEADER ------------------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+}
+
+.logo {
+  filter: invert(100%);
+  width: 25%;
+  padding: 10px 0 10px 25px;
+  max-height: 100px;
+}
+
+.sub-title {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  font-weight: bold;
+  font-size: clamp(0.7rem, 0.7vw, 4rem);
+}
+
+.nav-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  list-style: none;
+  font-size: clamp(0.8rem, 1vw, 4rem);
+}
+
+.nav-links li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* ------------------- JS CLASSES ------------------- */
+.back_nav {
+  background-color: #363636;
+  transition: all .5s;
+}
+
+header.back_nav nav a {
+  color: #fff;
+  transition: all .5s;
+}
+
+/* ------------------- HERO BANNER ------------------- */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to top right, rgba(0, 0, 0, .5) 0%,
+      rgba(0, 0, 0, .5) 100%), url(../img/background.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-title {
+  text-align: center;
+  position: relative;
+  color: white;
+  margin: 20em auto;
+}
+
+.hero-title h1 {
+  font-size: clamp(1.8rem, 5.5vw, 6.8rem);
+  font-weight: 600;
+  font-family: 'Abril Fatface', cursive;
+}
+
+/* ------------------- ABOUT ------------------- */
+.about-text {
+  margin: 1em;
+}
+
+.about-text span {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+.about-text a {
+  text-decoration: none;
+  color: #f98f3c;
+  font-weight: 600;
+}
+
+.about-picture {
+  border-radius: 80px;
+  padding: 4em;
+}
+
+/* ------------------- BRAND ------------------- */
+.brand-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#brand {
+  justify-content: center;
+  text-align: center;
+}
+
+#brand img {
+  margin-bottom: 3em;
+  width: 70%;
+}
+
+#brand p {
+  color: #363636;
+}
+
+/* ------------------- HOVER ------------------- */
+.hvr-sweep-to-top:before {
+  background-color: #f98f3c !important;
+}
+
+/* ------------------- CREATIONS ------------------- */
+.grid-container {
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 99%;
+  width: 100%;
+  background: rgba(255, 188, 55, 0.7);
+  border-radius: 5px;
+  /* typographic styles */
+  color: #363636;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  /* position the text centrally*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* hide the title by default */
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.grid-item:hover .grid-title {
+  opacity: 1;
+}
+
+.grid-image {
+  line-height: 0;
+  border-radius: 5px;
+  filter: blur(0px);
+  transition: filter 0.3s ease-in;
+}
+
+.grid-item:hover .grid-image {
+  filter: blur(2px);
+}
+
+/* ------------------- NEWS ------------------- */
+.news-container {
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 530px;
+  background-color: #f98f3c;
+  color: white;
+  transition: all .2s ease-in-out;
+}
+
+.card:hover {
+  background-color: white;
+  color: #f98f3c;
+  transform: scale(1.05);
+}
+
+article {
+  padding: 2em;
+}
+
+article img {
+  border-radius: 5px 5px 0 0;
+}
+
+article h2 {
+  margin: 1em 0;
+}
+
+/* ------------------- CONTACT ------------------- */
+#contact {
+  background: url(../img/coffee.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  margin: 1em;
+  max-width: 600px;
+  padding: 2em 3em;
+  background-color: white;
+  border-radius: 5px;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 1em;
+  margin: 1em 0;
+  border: none;
+  background: #F1F1F1;
+}
+
+input[type=text]:focus {
+  background-color: #ddd;
+}
+
+form label {
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+.submit-btn {
+  background-color: #f98f3c;
+  color: #363636;
+  padding: 1em;
+  margin: 1em 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: all .2s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+  background-color: #363636;
+  color: #f98f3c;
+}
+
+/* ------------------- SEPARATOR ------------------- */
+.separator:after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  margin: 10px 0 20px 0;
+  background-color: #f98f3c;
+}
+
+.separator.center-element {
+  text-align: center;
+}
+
+.separator.center-element:after {
+  width: 15%;
+  text-align: center;
+  margin: auto !important;
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+/* ------------------- FOOTER --------------------- */
+footer {
+  width: 100%;
+  background-color: #363636;
+  padding: 1em 10em;
+}
+
+.info-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+footer nav ul {
+  list-style: none;
+}
+
+footer nav a {
+  color: #F1F1F1;
+  text-decoration: none;
+}
+
+footer nav a:hover, .fab:hover {
+  color: #f98f3c;
+}
+
+address {
+  display: block;
+  color: #F1F1F1;
+}
+
+address a {
+  text-decoration: none;
+  color: #f98f3c;
+}
+
+address a:hover {
+  color: #fff;
+}
+
+.footer-title {
+  color: white;
+  font-size: .8em;
+}
+
+footer h2.separator:after {
+  width: 10%;
+}
+
+.fab {
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+}
+
+.copyright {
+  text-align: center;
+  color: white;
+  font-size: 0.8em;
+  padding: 1em;
+}
+
+.copyright a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+/* ------------------- RESPONSIVE DESIGN  ------------------- */
+/*IPAD AIR*/
+@media all and (max-width: 990px) {
+  section {
+    width: auto;
+    padding: 2em;
+  }
+
+  /*ABOUT SECTION*/
+  #about .col-6:first-child {
+    order: 2;
+  }
+
+  #about .col-6:last-child {
+    order: 1;
+  }
+
+  .about-picture {
+    border-radius: 50px;
+    padding: 2em;
+  }
+
+  .col-6 {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  /*BRAND SECTION*/
+  .brand-container {
+    display: block;
+  }
+
+  #brand img {
+    width: 50%;
+  }
+
+  .col-3 {
+    width: fit-content;
+    padding: 10%;
+  }
+/* CREATIONS SECTION */
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-4 {
+    width: 100%;
+    padding: 5% 0;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    margin: 2em auto;
+  }
+
+  article {
+    padding: 2em auto;
+    text-align: center;
+  }
+/* FOOTER SECTION */
+  footer {
+    padding: 2em;
+  }
+}
+@media all and (max-width: 790px) {
+  /* NEWS CARD */
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+}
+/*IPAD MINI*/
+@media all and (max-width: 710px) {
+  /* BRAND SENTENCE */
+  .sub-title {
+    font-size: clamp(0.5rem, 0.5vw, 1rem);
+  }
+/* HAMBURGER BUTTON */
+  .toggle-btn {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+
+  .nav-links li a {
+    padding: .5rem 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
+
+@media all and (max-width: 650px) {
+/* CREATIONS GRID */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+/* FOOTER  */
+  footer {
+    text-align: center;
+  }
+
+  footer h2.separator:after {
+    width: 100%;
+  }
+
+  .info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-5, .col-2 {
+    width: 100%;
+  }
+}
