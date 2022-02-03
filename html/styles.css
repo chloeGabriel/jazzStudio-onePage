@@ -38,6 +38,9 @@ h2 {
 section {
   min-height: 90vh;
   padding: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
@@ -191,9 +194,10 @@ header.back_nav nav a {
 }
 
 .hero-title h1 {
-  font-size: clamp(1.8rem, 5.5vw, 6.8rem);
+  font-size: clamp(1.8rem, 4vw, 6.8rem);
   font-weight: 600;
   font-family: 'Abril Fatface', cursive;
+  margin: 1rem 0;
 }
 
 /* ------------------- ABOUT ------------------- */
@@ -224,11 +228,6 @@ header.back_nav nav a {
   align-items: center;
 }
 
-#brand {
-  justify-content: center;
-  text-align: center;
-}
-
 #brand img {
   margin-bottom: 3em;
   width: 70%;
@@ -244,6 +243,9 @@ header.back_nav nav a {
 }
 
 /* ------------------- CREATIONS ------------------- */
+#creations {
+  background-color: #756c59;
+}
 .grid-container {
   margin: 2em auto;
   display: grid;
@@ -329,7 +331,7 @@ article h2 {
 
 /* ------------------- CONTACT ------------------- */
 #contact {
-  background: url(../img/coffee.jpg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(../img/coffee.jpg) center no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;

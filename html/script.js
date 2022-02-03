@@ -9,7 +9,7 @@ $(document).ready(function() {
     const speed = 600;
 
     $("html, body").animate({
-      scrollTop: $(section).offset().top - 100
+      scrollTop: $(section).offset().top - 90
     }, speed);
     return false;
   });
